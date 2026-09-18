@@ -142,7 +142,7 @@ export function AboutBento() {
               </span>
             </div>
             <Image
-              src="/profile.jpg"
+              src="/suaport.jpg"
               alt="Portrait of Fransua John Villesis"
               fill
               sizes="(max-width: 768px) 100vw, 400px"
