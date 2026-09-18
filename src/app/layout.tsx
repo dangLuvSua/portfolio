@@ -14,8 +14,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fransua",
-  description: "",
+  title: "Fransua John Villesis — Fullstack Developer",
+  description:
+    "Portfolio of Fransua John Villesis, a fullstack developer crafting minimal, fast, and thoughtful web experiences with React, Next.js, and TypeScript.",
+  metadataBase: new URL("https://portfolio-ten-inky.vercel.app"),
+  openGraph: {
+    title: "Fransua John Villesis — Fullstack Developer",
+    description:
+      "I build software that looks good and works even better. Minimal, fast, thoughtful web apps.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fransua John Villesis — Fullstack Developer",
+    description:
+      "Minimal, fast, thoughtful web experiences. React / Next.js / TypeScript.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -25,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col grain">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
