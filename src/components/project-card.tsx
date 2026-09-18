@@ -23,7 +23,7 @@ const projects: Project[] = [
     image2: "/OnedataDashboard.png",
     url: "onedata-baliwag.com",
     liveUrl: "https://onedata-baliwag.com",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Robb730/onedata",
     techStack: ["React", "Tailwind CSS", "Supabase", "PostgreSQL", "Recharts"],
     description:
       "A centralized education data management and analytics platform for the Department of Education - City of Baliwag.",

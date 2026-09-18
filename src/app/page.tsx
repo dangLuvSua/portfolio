@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ThemeToggle } from "../components/theme-toggle";
 import { ProjectsBrowser } from "../components/project-card";
+import { HeroSection } from "../components/hero-section";
 
 export default function Home() {
   return (
@@ -42,7 +43,7 @@ export default function Home() {
             </Link>
             <ThemeToggle />
             <a
-              href="mailto:hello@example.com"
+              href="mailto:fransuavillesis14@gmail.com"
               className="px-4 py-2 bg-foreground text-background rounded-md hover:opacity-90 transition-opacity font-semibold"
             >
               Hire Me
@@ -53,114 +54,7 @@ export default function Home() {
 
       <div className="max-w-6xl mx-auto px-6 sm:px-10 py-16 sm:py-24 flex flex-col gap-24">
         {/* Hero */}
-        <header className="flex flex-col gap-6 pt-12">
-          <div className="flex flex-col gap-1">
-            <span className="text-sm font-semibold tracking-widest uppercase text-accent">
-              Fransua John Villesis
-            </span>
-            <span className="text-sm font-semibold tracking-widest uppercase text-accent">
-              Fullstack Developer
-            </span>
-          </div>
-          <h1 className="text-4xl sm:text-6xl font-medium tracking-tight leading-[1.1] max-w-2xl">
-            I build software that <br className="hidden sm:inline" />
-            looks good and works <br className="hidden sm:inline" />
-            even better.
-          </h1>
-          <p className="text-accent max-w-lg text-lg leading-relaxed">
-            Modern web applications, thoughtful interfaces, and practical
-            solutions to real-world problems.
-          </p>
-          <div className="flex flex-wrap items-center gap-4 pt-4">
-            <Link
-              href="#projects"
-              className="px-6 py-3 bg-foreground text-background rounded-md hover:opacity-90 transition-opacity font-medium"
-            >
-              View My Work
-            </Link>
-            <Link
-              href="#about"
-              className="px-6 py-3 border border-foreground/20 rounded-md hover:bg-foreground/5 transition-colors font-medium"
-            >
-              About Me
-            </Link>
-          </div>
-
-          {/* Tech Stack */}
-          <div className="flex flex-col items-center gap-4 pt-12 border-t border-foreground/5 mt-4 w-full">
-            <span className="text-sm font-semibold tracking-widest uppercase text-accent">
-              Tech Stack
-            </span>
-            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 max-w-2xl">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-                alt="HTML5"
-                className="w-7 h-7 transition-transform hover:scale-110"
-                title="HTML5"
-              />
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-                alt="CSS3"
-                className="w-7 h-7 transition-transform hover:scale-110"
-                title="CSS3"
-              />
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                alt="JavaScript"
-                className="w-7 h-7 transition-transform hover:scale-110"
-                title="JavaScript"
-              />
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-                alt="TypeScript"
-                className="w-7 h-7 transition-transform hover:scale-110"
-                title="TypeScript"
-              />
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-                alt="React"
-                className="w-7 h-7 transition-transform hover:scale-110"
-                title="React"
-              />
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
-                alt="Next.js"
-                className="w-7 h-7 transition-transform hover:scale-110 dark:invert"
-                title="Next.js"
-              />
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-                alt="Tailwind CSS"
-                className="w-7 h-7 transition-transform hover:scale-110"
-                title="Tailwind CSS"
-              />
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
-                alt="Node.js"
-                className="w-7 h-7 transition-transform hover:scale-110"
-                title="Node.js"
-              />
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                alt="Python"
-                className="w-7 h-7 transition-transform hover:scale-110"
-                title="Python"
-              />
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-                alt="Java"
-                className="w-7 h-7 transition-transform hover:scale-110"
-                title="Java"
-              />
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
-                alt="PHP"
-                className="w-7 h-7 transition-transform hover:scale-110"
-                title="PHP"
-              />
-            </div>
-          </div>
-        </header>
+        <HeroSection />
 
         {/* Selected Work */}
         <section id="projects" className="scroll-mt-20 flex flex-col gap-10">
@@ -316,10 +210,10 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row gap-10 justify-between items-start">
             <a
-              href="mailto:hello@example.com"
+              href="mailto:fransuavillesis14@gmail.com"
               className="inline-flex items-center gap-2 text-2xl font-medium hover:opacity-70 transition-opacity underline decoration-1 underline-offset-8"
             >
-              fransuajohn@gmail.com
+              fransuavillesis14@gmail.com
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
