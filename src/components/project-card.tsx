@@ -104,12 +104,12 @@ const projects: Project[] = [
     title: "COIS",
     image1: "/project_beta_mockup_1787038592211.jpg",
     image2: "/project_beta_mockup_1787038592211.jpg",
-    url: "auraartisan.shop",
-    liveUrl: "#",
-    githubUrl: "#",
+    url: "cois-rent.vercel.app",
+    liveUrl: "https://cois-rent.vercel.app/",
+    githubUrl: "https://github.com/dangLuvSua/COIS",
     techStack: ["React", "Node.js", "Stripe API"],
     description:
-      "A headless e-commerce experience with sub-second page loads and seamless checkout.",
+      "A rental platform for tools and equipment, making it easy to find and rent items for your projects.",
     problem:
       "The client's legacy storefront was slow and losing mobile conversions.",
     solution:

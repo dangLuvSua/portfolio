@@ -1,7 +1,9 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion, useInView, type Variants } from "framer-motion";
+import { useRef } from "react";
 import type { ReactNode } from "react";
+import { usePageReady } from "./page-ready";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -27,12 +29,16 @@ export function Reveal({
   className?: string;
   once?: boolean;
 }) {
+  const ready = usePageReady();
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once, margin: "-80px" });
+  const show = ready && inView;
   return (
     <motion.div
+      ref={ref}
       className={className}
       initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once, margin: "-80px" }}
+      animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y }}
       transition={{ duration: 0.6, ease: EASE, delay }}
     >
       {children}
@@ -49,12 +55,15 @@ export function Stagger({
   className?: string;
   stagger?: number;
 }) {
+  const ready = usePageReady();
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
   return (
     <motion.div
+      ref={ref}
       className={className}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
+      animate={ready && inView ? "visible" : "hidden"}
       variants={{
         hidden: {},
         visible: { transition: { staggerChildren: stagger } },

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { usePageReady } from "./page-ready";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -72,7 +73,7 @@ function CopyEmailButton() {
           setTimeout(() => setCopied(false), 1600);
         } catch {}
       }}
-      className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-medium transition-all duration-300 hover:-translate-y-px hover:border-ring hover:shadow-md"
+      className="hidden group sm:inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-medium transition-all duration-300 hover:-translate-y-px hover:border-ring hover:shadow-md"
     >
       {copied ? (
         <Check className="size-4" />
@@ -86,12 +87,13 @@ function CopyEmailButton() {
 
 export function HeroSection() {
   const manilaTime = useManilaTime();
+  const ready = usePageReady();
 
   return (
     <motion.header
       variants={container}
       initial="hidden"
-      animate="visible"
+      animate={ready ? "visible" : "hidden"}
       className="flex flex-col gap-8 pt-10 sm:pt-14"
     >
       {/* Status row */}
