@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
@@ -50,9 +51,24 @@ export function Navbar() {
           className="group flex items-center gap-2.5 font-semibold tracking-tight"
           aria-label="Back to top"
         >
-          {/* <span className="grid size-8 place-items-center rounded-xl bg-foreground text-background text-[13px] font-bold transition-transform duration-300 group-hover:rotate-[-8deg] group-hover:scale-105">
-            FJ
-          </span> */}
+          <span className="relative grid size-8 shrink-0 place-items-center overflow-hidden rounded-lg transition-transform duration-300 group-hover:scale-105">
+            <Image
+              src="/FJLogo/fj-split-field-black.svg"
+              alt="FJ logo"
+              width={32}
+              height={32}
+              className="size-8 object-contain dark:hidden"
+              priority
+            />
+            <Image
+              src="/FJLogo/fj-split-field-white.svg"
+              alt="FJ logo"
+              width={32}
+              height={32}
+              className="hidden size-8 object-contain dark:block"
+              priority
+            />
+          </span>
           <span className="hidden xs:inline sm:inline text-sm">
             Fransua Villesis
           </span>

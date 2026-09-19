@@ -131,8 +131,11 @@ export function HeroSection() {
           variants={item}
           className="text-accent max-w-xl text-base sm:text-lg leading-relaxed text-pretty"
         >
-          Fourth-year software engineering student crafting fast, minimal web
-          apps — from education data platforms to clean, thoughtful interfaces.
+          I'm an Information Technology student at <b>Bulacan State University — Bustos Campus</b>,
+           specializing in Web & Mobile Application Development. 
+           I’m a full-stack developer with a strong focus on back-end development, 
+           and I use AI tools to help me build interactive, practical, and user-friendly applications.
+
         </motion.p>
       </div>
 
@@ -193,7 +196,7 @@ export function HeroSection() {
           <p className="font-mono text-2xl tracking-tight tabular-nums">
             {manilaTime || "--:--:--"}
           </p>
-          <p className="text-sm text-accent">Baliwag, Bulacan — open to remote.</p>
+          <p className="text-sm text-accent">San Rafael, Bulacan — open to remote.</p>
         </div>
       </motion.div>
 

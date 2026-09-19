@@ -111,75 +111,78 @@ export function AboutBento() {
   return (
     <Stagger className="grid grid-cols-1 md:grid-cols-5 gap-3" stagger={0.08}>
       <StaggerItem className="md:col-span-3">
-        <div className="bento bento-hover p-6 sm:p-8 flex flex-col gap-4 h-full">
-          <p className="font-mono text-xs text-accent">~/about.txt</p>
-          <p className="text-base sm:text-lg leading-relaxed text-pretty">
-            My journey into software engineering started with a curiosity for
-            how things work on the web. I now build{" "}
-            <span className="font-medium text-foreground">
-              robust, scalable apps
-            </span>{" "}
-            that don&apos;t just function flawlessly — they feel intuitive and
-            delightful to use.
-          </p>
-          <p className="text-accent leading-relaxed">
-            I believe the best products live at the intersection of clean code
-            and thoughtful design. Off the keyboard, I&apos;m usually hiking,
-            reading tech deep-dives, or shooting digital photography.
-          </p>
+        <div className="flex flex-col gap-3 h-full">
+          <div className="bento bento-hover p-6 sm:p-8 flex flex-col gap-4">
+            <p className="font-mono text-xs text-accent">~/about.txt</p>
+
+            <p className="text-base sm:text-lg leading-relaxed text-pretty">
+              I enjoy building{" "}
+              <span className="font-medium text-foreground">
+                websites and applications
+              </span>{" "}
+              that are useful, interactive, and easy to use. I like turning
+              ideas into working projects while learning something new along
+              the way.
+            </p>
+
+            <p className="text-accent leading-relaxed">
+              I’m always curious about how things work, enjoy solving problems,
+              and use AI as a tool to learn faster and improve the way I build.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="bento bento-hover p-6 flex flex-col gap-2">
+              <p className="text-xs font-semibold tracking-widest uppercase text-accent">
+                Interests
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {["Hiking", "Photography", "UI details", "Open source"].map(
+                  (t) => (
+                    <span
+                      key={t}
+                      className="rounded-full bg-foreground text-background px-3 py-1 text-xs font-medium"
+                    >
+                      {t}
+                    </span>
+                  ),
+                )}
+              </div>
+            </div>
+            <div className="bento bento-hover p-6 flex flex-col gap-1.5">
+              <p className="text-xs font-semibold tracking-widest uppercase text-accent">
+                Fun fact
+              </p>
+              <p className="text-sm leading-relaxed text-accent">
+                I obsess over 4px spacing, empty states, and buttons that feel{" "}
+                <span className="text-foreground">just right</span> to click.
+              </p>
+            </div>
+          </div>
         </div>
       </StaggerItem>
       <StaggerItem className="md:col-span-2">
-        <div className="flex flex-col gap-3 h-full">
-          <div className="bento group relative overflow-hidden aspect-[4/3]">
-            {/* Fallback monogram shown while /profile.jpg loads or if missing */}
-            <div
-              aria-hidden
-              className="absolute inset-0 grid place-items-center bg-foreground/[0.04]"
-            >
-              <span className="text-4xl font-semibold tracking-tight text-accent">
-                FJ
-              </span>
-            </div>
-            <Image
-              src="/suaport.jpg"
-              alt="Portrait of Fransua John Villesis"
-              fill
-              sizes="(max-width: 768px) 100vw, 400px"
-              className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
-              priority={false}
-            />
-            <span className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-border bg-background/85 px-3 py-1 text-[11px] font-medium backdrop-blur-md">
-              <span className="size-1.5 rounded-full bg-foreground animate-pulse-dot" />
-              Fransua — Bulacan, PH
+        <div className="bento group relative overflow-hidden h-full min-h-[320px] aspect-[4/3] md:aspect-auto md:min-h-full">
+          {/* Fallback monogram shown while /profile.jpg loads or if missing */}
+          <div
+            aria-hidden
+            className="absolute inset-0 grid place-items-center bg-foreground/[0.04]"
+          >
+            <span className="text-4xl font-semibold tracking-tight text-accent">
+              FJ
             </span>
           </div>
-          <div className="bento bento-hover p-6 flex flex-col gap-2">
-            <p className="text-xs font-semibold tracking-widest uppercase text-accent">
-              Interests
-            </p>
-            <div className="flex flex-wrap gap-1.5">
-              {["Hiking", "Photography", "UI details", "Open source"].map(
-                (t) => (
-                  <span
-                    key={t}
-                    className="rounded-full bg-foreground text-background px-3 py-1 text-xs font-medium"
-                  >
-                    {t}
-                  </span>
-                )
-              )}
-            </div>
-          </div>
-          <div className="bento bento-hover p-6 flex flex-col gap-1.5 flex-1">
-            <p className="text-xs font-semibold tracking-widest uppercase text-accent">
-              Fun fact
-            </p>
-            <p className="text-sm leading-relaxed text-accent">
-              I obsess over 4px spacing, empty states, and buttons that feel{" "}
-              <span className="text-foreground">just right</span> to click.
-            </p>
-          </div>
+          <Image
+            src="/suaport.jpg"
+            alt="Portrait of Fransua John Villesis"
+            fill
+            sizes="(max-width: 768px) 100vw, 400px"
+            className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
+            priority={false}
+          />
+          <span className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-border bg-background/85 px-3 py-1 text-[11px] font-medium backdrop-blur-md">
+            <span className="size-1.5 rounded-full bg-foreground animate-pulse-dot" />
+            Fransua — Bulacan, PH
+          </span>
         </div>
       </StaggerItem>
     </Stagger>
@@ -260,7 +263,11 @@ export function ContactSection() {
               onClick={copy}
               className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-medium transition-all duration-300 hover:-translate-y-px hover:shadow-md"
             >
-              {copied ? <Check className="size-4" /> : <Copy className="size-4" />}
+              {copied ? (
+                <Check className="size-4" />
+              ) : (
+                <Copy className="size-4" />
+              )}
               {copied ? "Copied!" : "Copy"}
             </button>
           </div>

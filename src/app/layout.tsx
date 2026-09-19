@@ -19,6 +19,19 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Fransua John Villesis, a fullstack developer crafting minimal, fast, and thoughtful web experiences with React, Next.js, and TypeScript.",
   metadataBase: new URL("https://portfolio-ten-inky.vercel.app"),
+  icons: {
+    icon: [
+      {
+        url: "/FJLogo/fj-split-field-black-128.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/FJLogo/fj-split-field-white-128.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+    apple: "/FJLogo/fj-split-field-black-256.png",
+  },
   openGraph: {
     title: "Fransua John Villesis — Fullstack Developer",
     description:
